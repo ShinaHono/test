@@ -1,0 +1,667 @@
+.wrapper {
+	text-align: center;
+}
+a {
+   text-decoration: none;
+   color: black;
+}
+a:hover {
+   text-decoration: none;
+   color: #505050;
+   font-weight: bolder;
+}
+/*モード選択*/
+
+.selectMode {
+	display: flex;
+	width: 500px;
+	margin: 0 auto;
+}
+.StopWatchBtn {
+	flex: 1 1 auto;
+}
+.TimerBtn {
+	flex: 1 1 auto;
+	padding-left: 3%;
+}
+	/*titleをdivに埋め込むブランク*/
+
+li {
+	list-style: none;
+}
+#goal1 {
+	text-align: center;
+	width: auto;
+	min-width: 300px;
+}
+#goal2 {
+	text-align: center;
+	width: auto;
+	min-width: 300px;
+}
+#goal3 {
+	text-align: center;
+	width: auto;
+	min-width: 300px;
+}
+#goal4 {
+	text-align: center;
+	width: auto;
+	min-width: 300px;
+}
+#goal5 {
+	text-align: center;
+	width: auto;
+	min-width: 300px;
+}
+#goal6 {
+	text-align: center;
+	width: auto;
+	min-width: 300px;
+}
+
+/*titleのdiv*/
+#title1 {
+	text-align: center;
+	font-size: 40px;
+	margin-bottom: 10px;
+}
+#title2 {
+	text-align: center;
+	font-size: 40px;
+	margin-bottom: 10px;
+}
+#title3 {
+	text-align: center;
+	font-size: 40px;
+	margin-bottom: 10px;
+}
+#title4 {
+	text-align: center;
+	font-size: 40px;
+	margin-bottom: 10px;
+}
+#title5 {
+	text-align: center;
+	font-size: 40px;
+	margin-bottom: 10px;
+}
+#title6 {
+	text-align: center;
+	font-size: 40px;
+	margin-bottom: 10px;
+}
+
+/*一つ目のストップウォッチ*/
+.container {
+	margin: 0 auto; /*これによりブロック要素を真ん中に持ってくる*/
+	text-align: center;
+	display: grid;
+	width: 500px;
+	height: 400px;
+	grid-template-rows: 10% 10% 55% 25%;
+	grid-template-columns: 10% 30% 30% 30%;
+	grid-template-areas: 
+		"deleteIcon1 title title title"
+		"deleteIcon1 areaA areaB areaC"
+		"deleteIcon1 area-a area-b area-c"
+		"deleteIcon1 start stop reset"
+		;
+}
+/*#ascendWatch1 {
+	grid-area: ascend;
+	margin: 0;
+}
+#descendWatch1 {
+	grid-area: descend;
+	margin: 0;
+}*/
+#deleteIcon1 {
+	grid-area: deleteIcon1;
+}
+#title1 {
+	grid-area: title;
+	text-align: center;
+	white-space: nowrap;
+	overflow: scroll;
+	height: 50px;
+}
+#hour-label1 {
+	grid-area: areaA;
+}
+#min-label1 {
+	grid-area: areaB;
+}
+#sec-label1 {
+	grid-area: areaC;
+}
+#hour1 {
+	grid-area: area-a;
+	font-size: 100px;
+}
+#minute1 {
+	grid-area: area-b;
+	font-size: 100px;
+}
+#second1 {
+	grid-area: area-c;
+	font-size: 100px;
+}
+#start1 {
+	grid-area: start;
+	font-size: 30px;
+}
+#stop1 {
+	grid-area: stop;
+	font-size: 30px;
+}
+#reset1 {
+	grid-area: reset;
+	font-size: 30px;
+}
+/*ラップを6行で折り返しにする。*/
+#wrap1{
+	display: grid;
+	width: 500px;
+	margin: 0 auto;
+	grid-template-columns: 25% 25% 25% 25%;
+	grid-template-rows: 90% 10%;
+	grid-template-areas: 
+		"areaL areaL areaR areaR"
+		"areaBot areaBot areaBot areaBot";
+	
+}
+.oneTosix1{
+	grid-area: 
+		areaL;
+}
+.sevenTotwelve1{
+	grid-area: 
+		areaR;
+}
+/*12回が最大ですよー*/
+#wrapMessage1 {
+	grid-area: 
+		areaBot;
+}
+/*ここより下二つ目のストップウォッチのプログラム*/
+.additional-container-hidden1 {
+	visibility: hidden;
+	height: 0;
+	width: 0;
+	
+}
+.additional-container-apparent1 {
+	visibility: visible;
+	width: 500px;
+	height: 400px;
+	margin: 0 auto;
+	display: grid;
+	grid-template-rows: 10% 10% 55% 25%;
+	grid-template-columns: 10% 30% 30% 30%;
+	grid-template-areas: 
+		"deleteIcon2 title title title"
+		"deleteIcon2 areaA areaB areaC"
+		"deleteIcon2 area-a area-b area-c"
+		"deleteIcon2 start stop reset"
+		;
+}
+#deleteIcon2 {
+	grid-area: deleteIcon2;
+    padding-top: 220px;
+}
+#title2 {
+	grid-area: title;
+	text-align: center;
+	white-space: nowrap;
+	overflow: scroll;
+	height: 50px;
+}
+#hour2 {
+	grid-are: area-a;
+	font-size: 100px;
+}
+#minute2 {
+	grid-area: area-b;
+	font-size: 100px;
+}
+#second2 {
+	grid-area: area-c;
+	font-size: 100px;
+}
+#start2 {
+	grid-area: start;
+	font-size: 30px;
+}
+#stop2 {
+	grid-area: stop;
+	font-size: 30px;
+}
+#reset2 {
+	grid-area: reset;
+	font-size: 30px;
+}
+
+/*ここより下一つ目のaddional アイコンの消滅復活*/
+.addBtn-delete1 {
+	visibility: hidden;
+	width: 0;
+	height: 0;
+}
+
+.addBtn-apparent1 {
+	visibility: visible;
+	width: 50px;
+	height: 50px;
+}
+/*ラップを6行で折り返しにする。*/
+#wrap2{
+	display: grid;
+	width: 500px;
+	margin: 0 auto;
+	grid-template-columns: 25% 25% 25% 25%;
+	grid-template-rows: 90% 10%;
+	grid-template-areas: 
+		"areaL areaL areaR areaR"
+		"areaBot areaBot areaBot areaBot";
+	
+}
+.oneTosix2{
+	grid-area: 
+		areaL;
+}
+.sevenTotwelve2{
+	grid-area: 
+		areaR;
+}
+/*12回が最大ですよー*/
+#wrapMessage2 {
+	grid-area: 
+		areaBot;
+}
+
+/*ここより下三つ目のストップウォッチのプログラム*/
+.additional-container-hidden2 {
+	visibility: hidden;
+	height: 0;
+	width: 0;
+	
+}
+.additional-container-apparent2 {
+	visibility: visible;
+	width: 500px;
+	height: 400px;
+	margin: 0 auto;
+	display: grid;
+	grid-template-rows: 10% 10% 55% 25%;
+	grid-template-columns: 10% 30% 30% 30%;
+	grid-template-areas: 
+		"deleteIcon3 title title title"
+		"deleteIcon3 areaA areaB areaC"
+		"deleteIcon3 area-a area-b area-c"
+		"deleteIcon3 start stop reset"
+		;
+}
+#deleteIcon3 {
+	grid-area: deleteIcon3;
+    padding-top: 220px;
+}
+#title3 {
+	grid-area: title;
+	text-align: center;
+	white-space: nowrap;
+	overflow: scroll;
+	height: 50px;
+}
+#hour3 {
+	grid-are: area-a;
+	font-size: 100px;
+}
+#minute3 {
+	grid-area: area-b;
+	font-size: 100px;
+}
+#second3 {
+	grid-area: area-c;
+	font-size: 100px;
+}
+#start3 {
+	grid-area: start;
+	font-size: 30px;
+}
+#stop3 {
+	grid-area: stop;
+	font-size: 30px;
+}
+#reset3 {
+	grid-area: reset;
+	font-size: 30px;
+}
+
+/*ここより下二つ目のaddional アイコンの消滅復活*/
+.addBtn-delete2 {
+	visibility: hidden;
+	width: 0;
+	height: 0;
+}
+
+.addBtn-apparent2 {
+	visibility: visible;
+	width: 50px;
+	height: 50px;
+}
+/*ラップを6行で折り返しにする。*/
+#wrap3{
+	display: grid;
+	width: 500px;
+	margin: 0 auto;
+	grid-template-columns: 25% 25% 25% 25%;
+	grid-template-rows: 90% 10%;
+	grid-template-areas: 
+		"areaL areaL areaR areaR"
+		"areaBot areaBot areaBot areaBot";
+	
+}
+.oneTosix3{
+	grid-area: 
+		areaL;
+}
+.sevenTotwelve3{
+	grid-area: 
+		areaR;
+}
+/*12回が最大ですよー*/
+#wrapMessage3 {
+	grid-area: 
+		areaBot;
+}
+
+/*ここより下四つ目のストップウォッチのプログラム*/
+.additional-container-hidden3 {
+	visibility: hidden;
+	height: 0;
+	width: 0;
+	
+}
+.additional-container-apparent3 {
+	visibility: visible;
+	width: 500px;
+	height: 400px;
+	margin: 0 auto;
+	display: grid;
+	grid-template-rows: 10% 10% 55% 25%;
+	grid-template-columns: 10% 30% 30% 30%;
+	grid-template-areas: 
+		"deleteIcon4 title title title"
+		"deleteIcon4 areaA areaB areaC"
+		"deleteIcon4 area-a area-b area-c"
+		"deleteIcon4 start stop reset"
+		;
+}
+#deleteIcon4 {
+	grid-area: deleteIcon4;
+    padding-top: 220px;
+}
+#title4 {
+	grid-area: title;
+	text-align: center;
+	white-space: nowrap;
+	overflow: scroll;
+	height: 50px;
+}
+#hour4 {
+	grid-are: area-a;
+	font-size: 100px;
+}
+#minute4 {
+	grid-area: area-b;
+	font-size: 100px;
+}
+#second4 {
+	grid-area: area-c;
+	font-size: 100px;
+}
+#start4 {
+	grid-area: start;
+	font-size: 30px;
+}
+#stop4 {
+	grid-area: stop;
+	font-size: 30px;
+}
+#reset4 {
+	grid-area: reset;
+	font-size: 30px;
+}
+
+/*ここより下三つ目のaddional アイコンの消滅復活*/
+.addBtn-delete3 {
+	visibility: hidden;
+	width: 0;
+	height: 0;
+}
+
+.addBtn-apparent3 {
+	visibility: visible;
+	width: 50px;
+	height: 50px;
+}
+/*ラップを6行で折り返しにする。*/
+#wrap4{
+	display: grid;
+	width: 500px;
+	margin: 0 auto;
+	grid-template-columns: 25% 25% 25% 25%;
+	grid-template-rows: 90% 10%;
+	grid-template-areas: 
+		"areaL areaL areaR areaR"
+		"areaBot areaBot areaBot areaBot";
+	
+}
+.oneTosix4{
+	grid-area: 
+		areaL;
+}
+.sevenTotwelve4{
+	grid-area: 
+		areaR;
+}
+/*12回が最大ですよー*/
+#wrapMessage4 {
+	grid-area: 
+		areaBot;
+}
+
+/*ここより下五つ目のストップウォッチのプログラム*/
+.additional-container-hidden4 {
+	visibility: hidden;
+	height: 0;
+	width: 0;
+	
+}
+.additional-container-apparent4 {
+	visibility: visible;
+	width: 500px;
+	height: 400px;
+	margin: 0 auto;
+	display: grid;
+	grid-template-rows: 10% 10% 55% 25%;
+	grid-template-columns: 10% 30% 30% 30%;
+	grid-template-areas: 
+		"deleteIcon5 title title title"
+		"deleteIcon5 areaA areaB areaC"
+		"deleteIcon5 area-a area-b area-c"
+		"deleteIcon5 start stop reset"
+		;
+}
+#deleteIcon5 {
+	grid-area: deleteIcon5;
+    padding-top: 220px;
+}
+#title5 {
+	grid-area: title;
+	text-align: center;
+	white-space: nowrap;
+	overflow: scroll;
+	height: 50px;
+}
+#hour5 {
+	grid-are: area-a;
+	font-size: 100px;
+}
+#minute5 {
+	grid-area: area-b;
+	font-size: 100px;
+}
+#second5 {
+	grid-area: area-c;
+	font-size: 100px;
+}
+#start5 {
+	grid-area: start;
+	font-size: 30px;
+}
+#stop5 {
+	grid-area: stop;
+	font-size: 30px;
+}
+#reset5 {
+	grid-area: reset;
+	font-size: 30px;
+}
+
+/*ここより下四つ目のaddional アイコンの消滅復活*/
+.addBtn-delete4 {
+	visibility: hidden;
+	width: 0;
+	height: 0;
+}
+
+.addBtn-apparent4 {
+	visibility: visible;
+	width: 50px;
+	height: 50px;
+}
+/*ラップを6行で折り返しにする。*/
+#wrap5{
+	display: grid;
+	width: 500px;
+	margin: 0 auto;
+	grid-template-columns: 25% 25% 25% 25%;
+	grid-template-rows: 90% 10%;
+	grid-template-areas: 
+		"areaL areaL areaR areaR"
+		"areaBot areaBot areaBot areaBot";
+	
+}
+.oneTosix5{
+	grid-area: 
+		areaL;
+}
+.sevenTotwelve5{
+	grid-area: 
+		areaR;
+}
+/*12回が最大ですよー*/
+#wrapMessage5 {
+	grid-area: 
+		areaBot;
+}
+
+/*ここより下六つ目のストップウォッチのプログラム*/
+.additional-container-hidden5 {
+	visibility: hidden;
+	height: 0;
+	width: 0;
+	
+}
+.additional-container-apparent5 {
+	visibility: visible;
+	width: 500px;
+	height: 400px;
+	margin: 0 auto;
+	display: grid;
+	grid-template-rows: 10% 10% 55% 25%;
+	grid-template-columns: 10% 30% 30% 30%;
+	grid-template-areas: 
+		"deleteIcon6 title title title"
+		"deleteIcon6 areaA areaB areaC"
+		"deleteIcon6 area-a area-b area-c"
+		"deleteIcon6 start stop reset"
+		;
+}
+#deleteIcon6 {
+	grid-area: deleteIcon6;
+    padding-top: 220px;
+}
+#title6 {
+	grid-area: title;
+	text-align: center;
+	white-space: nowrap;
+	overflow: scroll;
+	height: 50px;
+}
+#hour6 {
+	grid-are: area-a;
+	font-size: 100px;
+}
+#minute6 {
+	grid-area: area-b;
+	font-size: 100px;
+}
+#second6 {
+	grid-area: area-c;
+	font-size: 100px;
+}
+#start6 {
+	grid-area: start;
+	font-size: 30px;
+}
+#stop6 {
+	grid-area: stop;
+	font-size: 30px;
+}
+#reset6 {
+	grid-area: reset;
+	font-size: 30px;
+}
+
+/*ここより下五つ目のaddional アイコンの消滅復活*/
+.addBtn-delete5 {
+	visibility: hidden;
+	width: 0;
+	height: 0;
+}
+
+.addBtn-apparent5 {
+	visibility: visible;
+	width: 50px;
+	height: 50px;
+}
+/*ラップを6行で折り返しにする。*/
+#wrap6{
+	display: grid;
+	width: 500px;
+	margin: 0 auto;
+	grid-template-columns: 25% 25% 25% 25%;
+	grid-template-rows: 90% 10%;
+	grid-template-areas: 
+		"areaL areaL areaR areaR"
+		"areaBot areaBot areaBot areaBot";
+	
+}
+.oneTosix6{
+	grid-area: 
+		areaL;
+}
+.sevenTotwelve6{
+	grid-area: 
+		areaR;
+}
+/*12回が最大ですよー*/
+#wrapMessage6 {
+	grid-area: 
+		areaBot;
+}
+
+
