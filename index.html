@@ -1,0 +1,253 @@
+<!Doctype html>
+<html lang="jp">
+	<head>
+		<meta charset="utf-8">
+	    <link type="text/css" href="StopWatch&Timer/Stop Watch1/css/watch1.css" rel="stylesheet">
+		<title>Easy！Useful Timer will make your learning highly effective！</title>
+	</head>
+ <body>
+	  <div class="wrapper">
+		   <header><h1>Make your life more Fulfilling than yesterday</h1></header>
+		   <ul>
+			  <li><h2>〜Simple Timer！〜</h2></li>
+			   <br>
+			  <li><h3>Type your today's tasks!</h3></li>
+		      <li><form onSubmit="return false"><input type="text" width="auto" id="goal1" value="Typing your plan, and push the button."><input type="button" id="addingTitle"value="Add" onClick="title1();"></form></li>
+		      <li><form onSubmit="return false"><input type="text" width="auto" id="goal2" value=""><input type="button" id="addingTitle"value="Add" onClick="title2();"></form></li>
+		      <li><form onSubmit="return false"><input type="text" width="auto" id="goal3" value=""><input type="button" id="addingTitle"value="Add" onClick="title3();"></form></li>
+		      <li><form onSubmit="return false"><input type="text" width="auto" id="goal4" value=""><input type="button" id="addingTitle"value="Add" onClick="title4();"></form></li>
+		      <li><form onSubmit="return false"><input type="text" width="auto" id="goal5" value=""><input type="button" id="addingTitle"value="Add" onClick="title5();"></form></li>
+		      <li><form onSubmit="return false"><input type="text" width="auto" id="goal6" value=""><input type="button" id="addingTitle"value="Add" onClick="title6();"></form></li>
+		   <br>
+		   <li class="mode"><h3>Select Mode</h3></li>
+		   <li><div class="selectMode">
+		   <div id="TimerBtn" class="TimerBtn" width="100px" height="50px"><a href="#">Timer</a></div><div id="StopWatchBtn" class="StopWatchBtn" width="100px" height="50px"><a href="StopWatch&Timer/Stop Watch2/watch2.html">StopWatch</a></div>
+		   </div></li>
+		   </ul>
+		   <br><br>
+		   <!--ストップウォッチ１-->
+		   <div class="container">
+			   <div with="auto" id="title1"></div>
+			   <!--空のdeleteアイコン-->
+			   <div id="deleteIcon1"></div>
+			   <!--ストップウォッチのモード切り替え
+			   <button id="ascendWatch1" onclick="ascendWatch1()">Stop<br>Watch</button>
+			   <button id="descendWatch1" onclick="descendWatch1()">Timer</button>-->
+			   <!--本体-->
+			   <p id="hour-label1" class="label">Hours</p><p id="min-label1" class="label">Minutes</p><p id="sec-label1" class="label">Seconds</p>
+			   <input id="hour1" type="number" max="99" min="0" value="0" class="time"><input id="minute1" type="number" max="59" min="0" value="0" class="time"><input id="second1" type="number" max="59" min="0" value="0" class="time">
+			   <button id="start1" class="btn" disabled>Start</button>
+			   <button id="stop1" class="btn" disabled onclick="wrapA()">Stop</button>
+			   <button id="reset1" class="btn" disabled>Reset</button>
+		  </div>
+		  <!--ラップ１-->
+		  <div id="wrap1">
+		   <ul class="oneTosix1">
+			   <li id="wrap1-1"></li>
+			   <li id="wrap1-2"></li>
+			   <li id="wrap1-3"></li>
+			   <li id="wrap1-4"></li>
+			   <li id="wrap1-5"></li>
+			   <li id="wrap1-6"></li>
+		   </ul>
+		   <ul class="sevenTotwelve1">
+			   <li id="wrap1-7"></li>
+			   <li id="wrap1-8"></li>
+			   <li id="wrap1-9"></li>
+			   <li id="wrap1-10"></li>
+			   <li id="wrap1-11"></li>
+			   <li id="wrap1-12"></li>
+		   </ul>
+			<div id="wrapMessage1"></div>
+		  </div>
+		   <br><br>
+		   <!--追加ボタン１-->
+		   <img src="StopWatch&Timer/Stop Watch1/add.png" alt="追加ボタン" width="50px" id="addBtn-apparent1" class="addBtn-apparent">
+	       <br><br>
+		   <!--ストップウォッチ2-->
+		   <div id="addTimer1" class="additional-container-hidden1">
+			   <div with="auto" id="title2"></div>
+			   <!--削除ボタン-->
+			   <img src="StopWatch&Timer/Stop Watch1/delete.png" id="deleteIcon2" alt="deleteMark" width="30px" onClick="initialize2()">
+			   <!--本体-->
+			   <p id="hour-label2" class="label">Hours</p><p id="min-label2" class="label">Minutes</p><p id="sec-label2" class="label">Seconds</p>
+			   <input id="hour2" type="number" max="99" min="0" value="0" class="time"><input id="minute2" type="number" max="59" min="0" value="0" class="time"><input id="second2" type="number" max="59" min="0" value="0" class="time">
+			   <button id="start2" class="btn" disabled>Start</button>
+			   <button id="stop2" class="btn" disabled onclick="wrapB()">Stop</button>
+			   <button id="reset2" class="btn" disabled>Reset</button>
+		   </div>
+		  <!--ラップ2-->
+		  <div id="wrap2">
+		   <ul class="oneTosix2">
+			   <li id="wrap2-1"></li>
+			   <li id="wrap2-2"></li>
+			   <li id="wrap2-3"></li>
+			   <li id="wrap2-4"></li>
+			   <li id="wrap2-5"></li>
+			   <li id="wrap2-6"></li>
+		   </ul>
+		   <ul class="sevenTotwelve2">
+			   <li id="wrap2-7"></li>
+			   <li id="wrap2-8"></li>
+			   <li id="wrap2-9"></li>
+			   <li id="wrap2-10"></li>
+			   <li id="wrap2-11"></li>
+			   <li id="wrap2-12"></li>
+		   </ul>
+			<div id="wrapMessage2"></div>
+		  </div>
+		   <br><br>
+		   <!--追加ボタン2-->
+		   <img src="StopWatch&Timer/Stop Watch1/add.png" alt="追加ボタン" width="50px" id="addBtn-apparent2" class="addBtn-apparent">
+	       <br><br>
+		   <!--ストップウォッチ3-->
+		   <div id="addTimer2" class="additional-container-hidden2">
+			   <div with="auto" id="title3"></div>
+			   <!--削除ボタン-->
+			   <img src="StopWatch&Timer/Stop Watch1/delete.png" id="deleteIcon3" alt="deleteMark" width="30px" onClick="initialize3()">
+			   <!--本体-->
+			   <p id="hour-label3" class="label">Hours</p><p id="min-label3" class="label">Minutes</p><p id="sec-label3" class="label">Seconds</p>
+			   <input id="hour3" type="number" max="99" min="0" value="0" class="time"><input id="minute3" type="number" max="59" min="0" value="0" class="time"><input id="second3" type="number" max="59" min="0" value="0" class="time">
+			   <button id="start3" class="btn" disabled>Start</button>
+			   <button id="stop3" class="btn" disabled onclick="wrapC()">Stop</button>
+			   <button id="reset3" class="btn" disabled>Reset</button>
+		   </div>
+		  <!--ラップ3-->
+		  <div id="wrap3">
+		   <ul class="oneTosix3">
+			   <li id="wrap3-1"></li>
+			   <li id="wrap3-2"></li>
+			   <li id="wrap3-3"></li>
+			   <li id="wrap3-4"></li>
+			   <li id="wrap3-5"></li>
+			   <li id="wrap3-6"></li>
+		   </ul>
+		   <ul class="sevenTotwelve3">
+			   <li id="wrap3-7"></li>
+			   <li id="wrap3-8"></li>
+			   <li id="wrap3-9"></li>
+			   <li id="wrap3-10"></li>
+			   <li id="wrap3-11"></li>
+			   <li id="wrap3-12"></li>
+		   </ul>
+			<div id="wrapMessage3"></div>
+		  </div>
+		   <br><br>
+		   <!--追加ボタン3-->
+		   <img src="StopWatch&Timer/Stop Watch1/add.png" alt="追加ボタン" width="50px" id="addBtn-apparent3" class="addBtn-apparent">
+	       <br><br>
+		   <!--ストップウォッチ4-->
+		   <div id="addTimer3" class="additional-container-hidden3">
+			   <div with="auto" id="title4"></div>
+			   <!--削除ボタン-->
+			   <img src="StopWatch&Timer/Stop Watch1/delete.png" id="deleteIcon4" alt="deleteMark" width="30px" onClick="initialize4()">
+			   <!--本体-->
+			   <p id="hour-label4" class="label">Hours</p><p id="min-label4" class="label">Minutes</p><p id="sec-label4" class="label">Seconds</p>
+			   <input id="hour4" type="number" max="99" min="0" value="0" class="time"><input id="minute4" type="number" max="59" min="0" value="0" class="time"><input id="second4" type="number" max="59" min="0" value="0" class="time">
+			   <button id="start4" class="btn" disabled>Start</button>
+			   <button id="stop4" class="btn" disabled onclick="wrapD()">Stop</button>
+			   <button id="reset4" class="btn" disabled>Reset</button>
+		   </div>
+		  <!--ラップ4-->
+		  <div id="wrap4">
+		   <ul class="oneTosix4">
+			   <li id="wrap4-1"></li>
+			   <li id="wrap4-2"></li>
+			   <li id="wrap4-3"></li>
+			   <li id="wrap4-4"></li>
+			   <li id="wrap4-5"></li>
+			   <li id="wrap4-6"></li>
+		   </ul>
+		   <ul class="sevenTotwelve4">
+			   <li id="wrap4-7"></li>
+			   <li id="wrap4-8"></li>
+			   <li id="wrap4-9"></li>
+			   <li id="wrap4-10"></li>
+			   <li id="wrap4-11"></li>
+			   <li id="wrap4-12"></li>
+		   </ul>
+			<div id="wrapMessage4"></div>
+		  </div>
+		   <br><br>
+		   <!--追加ボタン4-->
+		   <img src="StopWatch&Timer/Stop Watch1/add.png" alt="追加ボタン" width="50px" id="addBtn-apparent4" class="addBtn-apparent">
+	       <br><br>
+		  <!--ストップウォッチ5-->
+		   <div id="addTimer4" class="additional-container-hidden4">
+			   <div with="auto" id="title5"></div>
+			   <!--削除ボタン-->
+			   <img src="StopWatch&Timer/Stop Watch1/delete.png" id="deleteIcon5" alt="deleteMark" width="30px" onClick="initialize5()">
+			   <!--本体-->
+			   <p id="hour-label5" class="label">Hours</p><p id="min-label5" class="label">Minutes</p><p id="sec-label5" class="label">Seconds</p>
+			   <input id="hour5" type="number" max="99" min="0" value="0" class="time"><input id="minute5" type="number" max="59" min="0" value="0" class="time"><input id="second5" type="number" max="59" min="0" value="0" class="time">
+			   <button id="start5" class="btn" disabled>Start</button>
+			   <button id="stop5" class="btn" disabled onclick="wrapE()">Stop</button>
+			   <button id="reset5" class="btn" disabled>Reset</button>
+		   </div>
+		  <!--ラップ5-->
+		  <div id="wrap5">
+		   <ul class="oneTosix5">
+			   <li id="wrap5-1"></li>
+			   <li id="wrap5-2"></li>
+			   <li id="wrap5-3"></li>
+			   <li id="wrap5-4"></li>
+			   <li id="wrap5-5"></li>
+			   <li id="wrap5-6"></li>
+		   </ul>
+		   <ul class="sevenTotwelve5">
+			   <li id="wrap5-7"></li>
+			   <li id="wrap5-8"></li>
+			   <li id="wrap5-9"></li>
+			   <li id="wrap5-10"></li>
+			   <li id="wrap5-11"></li>
+			   <li id="wrap5-12"></li>
+		   </ul>
+			<div id="wrapMessage5"></div>
+		  </div>
+		   <br><br>
+		   <!--追加ボタン5-->
+		   <img src="StopWatch&Timer/Stop Watch1/add.png" alt="追加ボタン" width="50px" id="addBtn-apparent5" class="addBtn-apparent">
+	       <br><br>
+		   <!--ストップウォッチ6-->
+		   <div id="addTimer5" class="additional-container-hidden5">
+			   <div with="auto" id="title6"></div>
+			   <!--削除ボタン-->
+			   <img src="StopWatch&Timer/Stop Watch1/delete.png" id="deleteIcon6" alt="deleteMark" width="30px" onClick="initialize6()">
+			   <!--本体-->
+			   <p id="hour-label6" class="label">Hours</p><p id="min-label6" class="label">Minutes</p><p id="sec-label6" class="label">Seconds</p>
+			   <input id="hour6" type="number" max="99" min="0" value="0" class="time"><input id="minute6" type="number" max="59" min="0" value="0" class="time"><input id="second6" type="number" max="59" min="0" value="0" class="time">
+			   <button id="start6" class="btn" disabled>Start</button>
+			   <button id="stop6" class="btn" disabled onclick="wrapF()">Stop</button>
+			   <button id="reset6" class="btn" disabled>Reset</button>
+		   </div>
+		  <!--ラップ6-->
+		  <div id="wrap6">
+		   <ul class="oneTosix6">
+			   <li id="wrap6-1"></li>
+			   <li id="wrap6-2"></li>
+			   <li id="wrap6-3"></li>
+			   <li id="wrap6-4"></li>
+			   <li id="wrap6-5"></li>
+			   <li id="wrap6-6"></li>
+		   </ul>
+		   <ul class="sevenTotwelve6">
+			   <li id="wrap6-7"></li>
+			   <li id="wrap6-8"></li>
+			   <li id="wrap6-9"></li>
+			   <li id="wrap6-10"></li>
+			   <li id="wrap6-11"></li>
+			   <li id="wrap6-12"></li>
+		   </ul>
+			<div id="wrapMessage6"></div>
+		  </div>
+		 <footer>&copy; 2021 Shinagawa Honoka</footer>
+	   </div>
+	 <script src="StopWatch&Timer/Stop Watch1/script/watch1.js" type="text/javascript"></script>
+	 <script src="StopWatch&Timer/Stop Watch1/script/watch2.js" type="text/javascript"></script>
+	 <script src="StopWatch&Timer/Stop Watch1/script/watch3.js" type="text/javascript"></script>
+	 <script src="StopWatch&Timer/Stop Watch1/script/watch4.js" type="text/javascript"></script>
+	 <script src="StopWatch&Timer/Stop Watch1/script/watch5.js" type="text/javascript"></script>
+	 <script src="StopWatch&Timer/Stop Watch1/script/watch6.js" type="text/javascript"></script>
+		   
+ </body>
+</html>
